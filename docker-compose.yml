@@ -1,0 +1,14 @@
+version: '3.0'
+
+services:
+  mongo:
+    image: mongo
+    container_name: mongo_db_dispenser
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodispenser:/data/configdb
+      - mongodispenser:/data/db
+
+volumes:
+  mongodispenser: {}
